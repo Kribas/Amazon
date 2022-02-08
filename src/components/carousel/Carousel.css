@@ -1,0 +1,11 @@
+.carousel--fadeBottom {
+    position: relative;
+    bottom: 118px;
+    height: 7.4rem;
+    background-image: linear-gradient(
+      180deg,
+      transparent,
+      rgba(255, 255, 255, 0.91),
+      #fff
+    );
+  }

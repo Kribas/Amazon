@@ -1,0 +1,81 @@
+
+
+.dropdown > .dropdown-menu {
+    min-width: 31rem;
+    min-height: 22rem;
+}
+
+.dropdown > .btn-secondary {
+    background-color: #131921;
+    border-color: #131921;
+}
+
+.dropdown-menu .dropdown__inner .dropdown__inner__left ul {
+    list-style: none;
+    
+}
+
+.dropdown__inner {
+    display: flex;
+}
+
+.dropdown__inner .dropdown__inner__right {
+    border-left: 1px solid #000;
+}
+
+.dropdown-menu .dropdown__inner .dropdown__inner__right ul {
+    list-style: none;
+    
+}
+
+.signIn__signUp > .signIn__btn {
+    background: linear-gradient(#f8e3ad, #eeba37);
+    padding: 5px 100px;
+    margin: 0 10px 0 11px;
+    height: 33px;
+    border: 1px solid;
+    border-color: #c89411 #b0820f #99710d;
+    vertical-align: middle;
+    color: #111;
+    text-align: center;
+    font-size: 13px;
+}
+
+.signIn__signUp > p {
+    font-size: 11px;
+    text-align: center;
+    margin: 7px 0px 9px 0px;
+}
+
+.dropdown__inner > .dropdown__inner__left {
+    margin-right: 20px;
+}
+
+.dropdown__inner > .dropdown__inner__left > h5 {
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+ .dropdown__lists {
+    font-size: 13px;
+    color: #444;
+    font-weight: 400;
+    display: block;
+}
+
+.dropdown__lists > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #E47911;
+}
+
+.dropdown__inner > .dropdown__inner__right > h5 {
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.dropdown__inner > .dropdown__inner__right {
+    margin-right: 20px;
+}
