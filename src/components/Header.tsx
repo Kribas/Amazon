@@ -9,10 +9,10 @@ const Header = () => {
         <div className="flex flex-grow sm:flex-grow-0 mt-2">
           <Image
             src="https://links.papareact.com/f90"
-            className="cursor-pointer"
+            className="cursor-pointer mx-2"
             alt="Header Logo"
-            width={150}
-            height={40}
+            width={120}
+            height={20}
             style={{ objectFit: "contain" }}
           />
         </div>
@@ -23,7 +23,7 @@ const Header = () => {
             <p>Lalitpur 44700</p>
           </div>
         </div>
-        <div className="hidden sm:flex flex-grow rounded-md h-10 items-center cursor-pointer bg-yellow-400 hover:bg-yellow-500">
+        <div className="hidden sm:flex flex-grow rounded-md h-10 items-center cursor-pointer bg-yellow-400 hover:bg-yellow-500 mr-3">
           <input
             type="text"
             className="h-full p-2 w-6 rounded-l-md flex-grow flex-shrink focus:outline-none"
@@ -39,7 +39,14 @@ const Header = () => {
           </div>
           <div className="hover:underline cursor-pointer">
             <p>Returns</p>
-            <p>Accounts & Lists</p>
+            <p className="font-extrabold md:text-sm">& Orders</p>
+          </div>
+          <div className="hover:underline relative cursor-pointer">
+            <span className="absolute top-0 right-0 h-4 bg-yellow-400 rounded-lg text-center w-4">
+              0
+            </span>
+            <FiShoppingCart className="h-5 w-5" />
+            <p className="font-extrabold md:text-sm">Cart</p>
           </div>
         </div>
       </div>
