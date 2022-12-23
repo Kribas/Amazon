@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Banner from "../src/components/Banner";
 import Header from "../src/components/Header";
 
 export default function Home() {
@@ -10,6 +11,9 @@ export default function Home() {
       <header>
         <Header />
       </header>
+      <main className="mx-auto mx-w-screen-2xl">
+        <Banner />
+      </main>
     </div>
   );
 }
