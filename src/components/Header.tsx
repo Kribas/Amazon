@@ -1,8 +1,14 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { FiMapPin, FiMenu, FiSearch, FiShoppingCart } from "react-icons/fi";
+import { useSelector } from "react-redux";
+import { selectItems } from "../slices/basketSlice";
 
 const Header = () => {
+  const items = useSelector(selectItems);
+  const router = useRouter();
+
   return (
     <>
       <div className="flex items-center flex-grow bg-amazon_blue p-1">
@@ -43,10 +49,16 @@ const Header = () => {
           </div>
           <div className="hover:underline relative cursor-pointer">
             <span className="absolute top-0 right-0 h-4 bg-yellow-400 rounded-lg text-center w-4">
-              0
+              {items.length}
             </span>
+
             <FiShoppingCart className="h-5 w-5" />
-            <p className="font-extrabold md:text-sm">Cart</p>
+            <p
+              onClick={() => router.push("/checkout")}
+              className="font-extrabold md:text-sm"
+            >
+              Cart
+            </p>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { addItemToBasket, selectItems } from "../slices/basketSlice";
 
 type ProductProps = {
   id: number;
@@ -27,6 +29,23 @@ const Product: React.FC<ProductProps> = ({
   );
 
   const [hasPrime] = useState(Math.random() < 0.5);
+
+  const dispatch = useDispatch();
+
+  const addToBasket = () => {
+    dispatch(
+      addItemToBasket({
+        id,
+        title,
+        category,
+        price,
+        description,
+        image,
+        rating,
+        hasPrime,
+      })
+    );
+  };
 
   return (
     <div className="flex flex-col m-3 p-3 z-30 relative bg-white">
@@ -69,7 +88,9 @@ const Product: React.FC<ProductProps> = ({
           <p className="text-xs">FREE Next-day delivery</p>
         </div>
       )}
-      <button className="button mt-auto">Add to Basket</button>
+      <button onClick={addToBasket} className="button mt-auto">
+        Add to Basket
+      </button>
     </div>
   );
 };
